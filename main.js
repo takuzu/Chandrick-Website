@@ -5,25 +5,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
+    const menuBackdrop = document.getElementById('menu-backdrop');
     const body = document.body;
 
     // Mobile Menu Toggle
     function toggleMenu() {
-        if (mobileMenu.classList.contains('hidden')) {
+        if (!mobileMenu || !menuBackdrop) return;
+
+        const isOpening = mobileMenu.classList.contains('hidden');
+        
+        if (isOpening) {
             mobileMenu.classList.remove('hidden');
+            menuBackdrop.classList.remove('hidden');
+            
             // Trigger animation
             requestAnimationFrame(() => {
-                mobileMenu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+                mobileMenu.classList.remove('translate-x-full');
+                menuBackdrop.classList.add('opacity-100');
             });
+            body.style.overflow = 'hidden';
         } else {
-            mobileMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+            mobileMenu.classList.add('translate-x-full');
+            menuBackdrop.classList.remove('opacity-100');
+            
             setTimeout(() => {
                 mobileMenu.classList.add('hidden');
+                menuBackdrop.classList.add('hidden');
             }, 300);
+            body.style.overflow = '';
         }
     }
 
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+    if (menuClose) menuClose.addEventListener('click', toggleMenu);
+    if (menuBackdrop) menuBackdrop.addEventListener('click', toggleMenu);
 
     // Close menu on link click
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
