@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title> Chandrick's Beauty Room</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-zen-sage selection:text-white overflow-x-hidden">
+    <nav class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-lg border-b border-outline-variant/30">
+        <div class="flex justify-between items-center px-12 py-5 w-full max-w-screen-2xl mx-auto">
+            <div
+                class="font-headline italic text-2xl text-zen-sage-dark tracking-tight border border-black px-4 py-1.5 rounded-sm">
+                Chandrick's Beauty Room</div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-zen-sage-dark border-b-2 border-zen-sage pb-1 transition-colors duration-300"
+                    href="#">Home</a>
+                <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-on-surface-variant hover:text-zen-sage transition-colors duration-300"
+                    href="#services">Services</a>
+                <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-on-surface-variant hover:text-zen-sage transition-colors duration-300"
+                    href="#about">About Us</a>
+                <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-on-surface-variant hover:text-zen-sage transition-colors duration-300"
+                    href="#gallery">Gallery</a>
+                <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-on-surface-variant hover:text-zen-sage transition-colors duration-300"
+                    href="#contact">Contact</a>
+            </div>
+            <a href="https://wa.me/27797113968" target="_blank" rel="noopener noreferrer"
+                class="bg-zen-wood text-white px-7 py-2.5 rounded-sm font-label uppercase tracking-widest text-[10px] font-bold active:scale-95 duration-200 shadow-sm hover:bg-zen-wood-light transition-colors inline-block">
+                Book Now
+            </a>
+        </div>
+    </nav>
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img alt="Serene spa interior with natural light and bamboo elements"
+                class="w-full h-full object-cover" src="https://static.vecteezy.com/system/resources/previews/049/978/749/non_2x/spa-concept-massage-stones-with-towels-and-candles-free-photo.jpg" />
+            <div class="absolute inset-0 zen-gradient-hero"></div>
+        </div>
+        <div class="relative z-10 w-full max-w-screen-2xl px-12 grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-8 lg:col-span-6">
+                <span
+                    class="font-label text-zen-sage-dark uppercase tracking-[0.4rem] text-xs mb-4 block font-semibold">Est.
+                    2024</span>
+                <h1 class="font-headline text-6xl md:text-8xl text-on-surface leading-tight mb-8">
+                    Elevated <br /> <span class="italic text-zen-sage">Aesthetics</span>
+                </h1>
+                <p class="font-body text-lg text-on-surface-variant max-w-md mb-12 leading-relaxed">
+                    A curated sanctuary where high-end artistry meets clinical precision. Experience the pinnacle of
+                    beauty at Chandrick's Salon.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="https://wa.me/27797113968" target="_blank" rel="noopener noreferrer"
+                        class="bg-zen-sage text-white px-10 py-4 rounded-sm font-label uppercase tracking-widest text-xs font-bold hover:bg-zen-sage-dark transition-all shadow-md inline-block">
+                        Book Your Session
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-12 right-12 hidden lg:flex items-center gap-4 text-zen-sage-dark/60">
+            <span class="font-label text-[10px] uppercase tracking-widest font-bold">Scroll to Explore</span>
+            <span class="material-symbols-outlined animate-bounce">expand_more</span>
+        </div>
+    </header>
+    <section class="py-32 px-12 bg-white" id="services">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+                <div>
+                    <h2 class="font-headline text-5xl text-on-surface mb-6">The Curator's Menu</h2>
+                    <div class="h-0.5 w-24 bg-zen-sage"></div>
+                </div>
+                <p class="font-body text-on-surface-variant max-w-sm italic text-sm">
+                    Precision treatments designed for the modern individual who demands nothing less than excellence.
+                    Updated for 2025.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-24 gap-y-16">
+                <div
+                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-zen-sage text-3xl">spa</span>
+                        <h3 class="font-headline text-2xl font-medium tracking-tight">Massages</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Swedish
+                                Full Body</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R400</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Hot
+                                stone full body</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R450</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Back,
+                                neck &amp; shoulder</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R250</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Back,
+                                neck &amp; shoulder Hot Stone</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R300</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Full
+                                Half Body</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R300</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors italic">Add
+                                On G5 Machine</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R70</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-zen-sage text-3xl">face</span>
+                        <h3 class="font-headline text-2xl font-medium tracking-tight">Tint &amp; Wax</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Lash
+                                Tint</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R50</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Brow
+                                Tint</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R50</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Brow
+                                Wax</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R50</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Lip
+                                Wax</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R40</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Nose
+                                &amp; Ear</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R90</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-zen-sage text-3xl">pan_tool</span>
+                        <h3 class="font-headline text-2xl font-medium tracking-tight">Manicure / Pedicure</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Geloverlay</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R200</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Geloverlay
+                                    + Tips</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R250</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Full
+                                    Manicure &amp; Gel</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R270</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Gel
+                                    fill (After 2weeks)</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R170</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Add
+                                    Art</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R10-15</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Soak
+                                    Off Gel</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R60</span>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Gel
+                                    Toes</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R150</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Full
+                                    Pedicure &amp; Gel</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R280</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Gel
+                                    Removal (buff off)</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R40</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Paraffin
+                                    mask (hand/feet)</span>
+                                <span class="font-label text-zen-wood font-semibold text-sm">R70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-16">
+                    <div
+                        class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-zen-sage text-3xl">dry_cleaning</span>
+                            <h3 class="font-headline text-2xl font-medium tracking-tight">Waxing</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Underarm</span>
+                                <span class="font-label text-zen-wood font-semibold text-base">R100</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Brazilian</span>
+                                <span class="font-label text-zen-wood font-semibold text-base">R150</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Hollywood</span>
+                                <span class="font-label text-zen-wood font-semibold text-base">R200</span>
+                            </div>
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Half
+                                    Leg</span>
+                                <span class="font-label text-zen-wood font-semibold text-base">R200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-zen-sage text-3xl">visibility</span>
+                            <h3 class="font-headline text-2xl font-medium tracking-tight">Lashes</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                                <span
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Classic</span>
+                                <span class="font-label text-zen-wood font-semibold text-base">R300</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-zen-sage text-3xl">person</span>
+                        <h3 class="font-headline text-2xl font-medium tracking-tight">Facials</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Classic
+                                Facial</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R280</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Hydration
+                                Facial</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R320</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-zen-sage text-3xl">face_5</span>
+                        <h3 class="font-headline text-2xl font-medium tracking-tight">Micropigment Brow</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Microbladding</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R550</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Ombre
+                                (Combo)</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R1200</span>
+                        </div>
+                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <span
+                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Shading/Powder</span>
+                            <span class="font-label text-zen-wood font-semibold text-base">R850</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-20 p-8 bg-surface-container-low border-l-4 border-zen-sage rounded-r-lg flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-zen-sage">info</span>
+                    <p class="font-body text-on-surface-variant text-sm">Booking requires a non-refundable <span
+                            class="text-zen-sage-dark font-bold">R60 deposit</span> to secure your session.</p>
+                </div>
+                <a href="https://wa.me/27797113968" target="_blank" rel="noopener noreferrer"
+                    class="bg-zen-sage text-white px-8 py-3 rounded-sm font-label uppercase tracking-widest text-xs font-bold hover:bg-zen-sage-dark transition-all inline-block">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="relative min-h-[600px] flex items-center bg-white overflow-hidden" id="about">
+        <div class="grid grid-cols-1 md:grid-cols-2 h-full w-full">
+            <div class="relative h-full min-h-[400px]">
+                <img alt="Zen stones and bamboo in soft natural light" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuARTkperrZU2PFCt6lnIX7JiH9asBXokTcY2w2TI_HsNtW5_LYiJo8q60IYAu2XN0hlCVm-9ZUtBKjuRPXYoIeDe9MDFCTi3UxuSuJwuyxqdlQNzZ0WU2kVgA20c7p-EU2hJLSg5dEK9CeTKERjIdD8sv6lMjmg7fRV1fkSQHIdXhBB0hd6Y7iuj91ZVBCXI4zlpsxzvCoGBAxn-aMkOLKZO30UyHYWK1c6luff4Z39ME6T4lvG3X4uNounbTQqvFNpJ8QPBQXWL9_s" />
+            </div>
+            <div class="flex flex-col justify-center py-20 px-12 md:px-24 bg-zen-white">
+                <span
+                    class="font-label text-zen-sage-dark uppercase tracking-[0.2rem] text-[10px] mb-4 block font-bold">About
+                    Us</span>
+                <h2 class="font-headline text-4xl mb-8 text-on-surface leading-relaxed">The Obsidian Curator</h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-headline text-2xl mb-3 italic text-zen-sage-dark">Our Vision</h3>
+                        <p class="font-body text-on-surface-variant leading-relaxed text-sm">
+                            To be the premier sanctuary for transformative beauty, where every individual discovers
+                            their most polished, serene, and confident self through our curated aesthetic experiences.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-headline text-2xl mb-3 italic text-zen-sage-dark">Our Mission</h3>
+                        <p class="font-body text-on-surface-variant leading-relaxed text-sm">
+                            We are dedicated to providing unparalleled luxury and meticulous artistry in every
+                            treatment. By merging clinical precision with a tranquil environment, we curate exceptional
+                            beauty solutions tailored to the modern individual.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 px-12 bg-surface-container-lowest" id="gallery">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="mb-16 text-center">
+                <span
+                    class="font-label text-zen-sage-dark uppercase tracking-[0.2rem] text-[10px] mb-4 block font-bold">Portfolio</span>
+                <h2 class="font-headline text-4xl md:text-5xl text-on-surface">Our Curated Work</h2>
+                <div class="h-0.5 w-16 bg-zen-sage mx-auto mt-6"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="group relative aspect-square overflow-hidden bg-zen-cream cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop"
+                        alt="Spa and Massage"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <span class="font-headline text-white text-xl italic tracking-wide">Tranquil Massage</span>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden bg-zen-cream cursor-pointer">
+                    <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Manicure and Nails"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <span class="font-headline text-white text-xl italic tracking-wide">Pristine Nails</span>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden bg-zen-cream cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=800&auto=format&fit=crop"
+                        alt="Skincare and Facial"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <span class="font-headline text-white text-xl italic tracking-wide">Radiant Facials</span>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden bg-zen-cream cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop"
+                        alt="Salon Aesthetics"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <span class="font-headline text-white text-xl italic tracking-wide">Curated Aesthetics</span>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden bg-zen-cream cursor-pointer">
+                    <img src="https://images.pexels.com/photos/4046316/pexels-photo-4046316.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Lashes and Brows"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <span class="font-headline text-white text-xl italic tracking-wide">Precision Lashes</span>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden bg-zen-cream cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop"
+                        alt="Relaxation"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <span class="font-headline text-white text-xl italic tracking-wide">Ultimate Serenity</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="py-32 bg-white" id="contact">
+        <div class="max-w-screen-xl mx-auto px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                <div>
+                    <h2 class="font-headline text-5xl mb-12 text-on-surface">Visit The Studio</h2>
+                    <div class="space-y-12">
+                        <div class="flex gap-6">
+                            <span class="material-symbols-outlined text-zen-sage shrink-0">location_on</span>
+                            <div>
+                                <h4 class="font-headline text-xl mb-2 text-on-surface">Location</h4>
+                                <p class="font-body text-on-surface-variant text-sm">12 Obsidian Avenue, Elite District,
+                                    Cape Town, 8001</p>
+                                <a class="text-zen-sage font-label uppercase tracking-widest text-[10px] font-bold mt-2 inline-block border-b border-zen-sage/30 hover:text-zen-sage-dark transition-colors"
+                                    href="#">Open in Maps</a>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <span class="material-symbols-outlined text-zen-sage shrink-0">schedule</span>
+                            <div>
+                                <h4 class="font-headline text-xl mb-2 text-on-surface">Hours</h4>
+                                <p class="font-body text-on-surface-variant text-sm">Mon — Fri: 09:00 - 18:00</p>
+                                <p class="font-body text-on-surface-variant text-sm">Sat: 10:00 - 16:00</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <span class="material-symbols-outlined text-zen-sage shrink-0"
+                                data-weight="fill">chat</span>
+                            <div>
+                                <h4 class="font-headline text-xl mb-2 text-on-surface">Inquiries</h4>
+                                <p class="font-body text-on-surface-variant text-sm mb-4">Direct message us via WhatsApp
+                                    for immediate support.</p>
+                                <a class="inline-flex items-center gap-3 bg-zen-sage text-white px-6 py-3 rounded-sm font-label uppercase tracking-widest text-[10px] font-bold hover:bg-zen-sage-dark transition-all shadow-sm"
+                                    href="https://wa.me/27797113968">
+                                    <span class="material-symbols-outlined text-sm">message</span>
+                                    WhatsApp: 079 711 3968
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zen-cream p-12 rounded-sm shadow-sm border border-outline-variant/30">
+                    <h3 class="font-headline text-3xl mb-8 text-on-surface">Request a Callback</h3>
+                    <form class="space-y-8">
+                        <div
+                            class="relative border-b border-outline py-2 focus-within:border-zen-sage transition-colors">
+                            <label
+                                class="block font-label text-[10px] uppercase tracking-widest text-zen-sage-dark font-bold mb-1">Full
+                                Name</label>
+                            <input
+                                class="w-full bg-transparent border-none p-0 text-on-surface focus:ring-0 placeholder-on-surface-variant/40 font-body text-sm"
+                                placeholder="Enter your name" type="text" />
+                        </div>
+                        <div
+                            class="relative border-b border-outline py-2 focus-within:border-zen-sage transition-colors">
+                            <label
+                                class="block font-label text-[10px] uppercase tracking-widest text-zen-sage-dark font-bold mb-1">Service
+                                Interest</label>
+                            <select
+                                class="w-full bg-transparent border-none p-0 text-on-surface focus:ring-0 font-body text-sm appearance-none">
+                                <option class="bg-white">Select a service</option>
+                                <option class="bg-white">Massages</option>
+                                <option class="bg-white">Manicure / Pedicure</option>
+                                <option class="bg-white">Waxing</option>
+                                <option class="bg-white">Lashes</option>
+                                <option class="bg-white">Facials</option>
+                                <option class="bg-white">Micropigment Brow</option>
+                            </select>
+                        </div>
+                        <div
+                            class="relative border-b border-outline py-2 focus-within:border-zen-sage transition-colors">
+                            <label
+                                class="block font-label text-[10px] uppercase tracking-widest text-zen-sage-dark font-bold mb-1">Phone
+                                Number</label>
+                            <input
+                                class="w-full bg-transparent border-none p-0 text-on-surface focus:ring-0 placeholder-on-surface-variant/40 font-body text-sm"
+                                placeholder="+27 00 000 0000" type="tel" />
+                        </div>
+                        <button
+                            class="w-full py-5 bg-zen-wood text-white font-label uppercase tracking-[0.2rem] text-[11px] font-bold hover:bg-zen-wood-light transition-all shadow-md">
+                            Send Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="w-full py-16 px-12 bg-zen-white border-t border-outline-variant">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-screen-2xl mx-auto">
+            <div class="font-headline text-xl italic text-zen-sage-dark">The Obsidian Curator</div>
+            <div class="flex gap-8">
+                <a class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant font-semibold hover:text-zen-sage transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant font-semibold hover:text-zen-sage transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant font-semibold hover:text-zen-sage transition-colors"
+                    href="#">Careers</a>
+                <a class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant font-semibold hover:text-zen-sage transition-colors"
+                    href="#">Instagram</a>
+            </div>
+            <div class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant font-medium">
+                © 2025 Chandrick's Beauty Room. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
