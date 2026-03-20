@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // Trigger animation
             requestAnimationFrame(() => {
-                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.remove('translate-y-8', 'opacity-0', 'pointer-events-none');
                 menuBackdrop.classList.add('opacity-100');
             });
             body.style.overflow = 'hidden';
         } else {
-            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.add('translate-y-8', 'opacity-0', 'pointer-events-none');
             menuBackdrop.classList.remove('opacity-100');
             
             setTimeout(() => {
