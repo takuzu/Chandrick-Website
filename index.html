@@ -17,12 +17,14 @@
 </head>
 
 <body class="bg-surface text-on-surface font-body selection:bg-zen-sage selection:text-white overflow-x-hidden">
-    <nav class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-lg border-b border-outline-variant/30">
-        <div class="flex justify-between items-center px-12 py-5 w-full max-w-screen-2xl mx-auto">
+    <nav class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-lg border-b border-outline-variant/30 transition-all duration-300" id="navbar">
+        <div class="flex justify-between items-center px-6 md:px-12 py-5 w-full max-w-screen-2xl mx-auto">
             <div
-                class="font-headline italic text-2xl text-zen-sage-dark tracking-tight border border-black px-4 py-1.5 rounded-sm">
+                class="font-headline italic text-lg md:text-2xl text-zen-sage-dark tracking-tight border border-black px-2 py-1 md:px-4 md:py-1.5 rounded-sm">
                 Chandrick's Beauty Room</div>
-            <div class="hidden md:flex items-center gap-10">
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center gap-10">
                 <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-zen-sage-dark border-b-2 border-zen-sage pb-1 transition-colors duration-300"
                     href="#">Home</a>
                 <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-on-surface-variant hover:text-zen-sage transition-colors duration-300"
@@ -34,10 +36,36 @@
                 <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-on-surface-variant hover:text-zen-sage transition-colors duration-300"
                     href="#contact">Contact</a>
             </div>
-            <a href="https://wa.me/27797113968" target="_blank" rel="noopener noreferrer"
-                class="bg-zen-wood text-white px-7 py-2.5 rounded-sm font-label uppercase tracking-widest text-[10px] font-bold active:scale-95 duration-200 shadow-sm hover:bg-zen-wood-light transition-colors inline-block">
-                Book Now
-            </a>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/27797113968" target="_blank" rel="noopener noreferrer"
+                    class="bg-zen-wood text-white px-5 md:px-7 py-2 md:py-2.5 rounded-sm font-label uppercase tracking-widest text-[9px] md:text-[10px] font-bold active:scale-95 duration-200 shadow-sm hover:bg-zen-wood-light transition-colors inline-block">
+                    Book Now
+                </a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-toggle" class="lg:hidden text-zen-sage-dark p-1 focus:outline-none" aria-label="Toggle navigation">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-surface/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 lg:hidden transition-all duration-300 opacity-0 translate-y-10">
+            <button id="menu-close" class="absolute top-8 right-8 text-on-surface-variant focus:outline-none">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <a class="mobile-nav-link font-headline italic text-4xl text-zen-sage-dark active:text-zen-sage" href="#">Home</a>
+            <a class="mobile-nav-link font-headline italic text-4xl text-on-surface-variant active:text-zen-sage" href="#services">Services</a>
+            <a class="mobile-nav-link font-headline italic text-4xl text-on-surface-variant active:text-zen-sage" href="#about">About Us</a>
+            <a class="mobile-nav-link font-headline italic text-4xl text-on-surface-variant active:text-zen-sage" href="#gallery">Gallery</a>
+            <a class="mobile-nav-link font-headline italic text-4xl text-on-surface-variant active:text-zen-sage" href="#contact">Contact</a>
+            <div class="mt-8">
+                 <a href="https://wa.me/27797113968" target="_blank" rel="noopener noreferrer"
+                    class="bg-zen-sage text-white px-12 py-4 rounded-sm font-label uppercase tracking-widest text-xs font-bold shadow-lg">
+                    Book Appointment
+                </a>
+            </div>
         </div>
     </nav>
     <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -46,21 +74,21 @@
                 class="w-full h-full object-cover" src="https://static.vecteezy.com/system/resources/previews/049/978/749/non_2x/spa-concept-massage-stones-with-towels-and-candles-free-photo.jpg" />
             <div class="absolute inset-0 zen-gradient-hero"></div>
         </div>
-        <div class="relative z-10 w-full max-w-screen-2xl px-12 grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div class="md:col-span-8 lg:col-span-6">
+        <div class="relative z-10 w-full max-w-screen-2xl px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-12 lg:col-span-7 xl:col-span-6">
                 <span
-                    class="font-label text-zen-sage-dark uppercase tracking-[0.4rem] text-xs mb-4 block font-semibold">Est.
+                    class="font-label text-zen-sage-dark uppercase tracking-[0.4rem] text-[10px] md:text-xs mb-4 block font-semibold">Est.
                     2024</span>
-                <h1 class="font-headline text-6xl md:text-8xl text-on-surface leading-tight mb-8">
+                <h1 class="font-headline text-5xl sm:text-7xl md:text-8xl text-on-surface leading-tight mb-8">
                     Elevated <br /> <span class="italic text-zen-sage">Aesthetics</span>
                 </h1>
-                <p class="font-body text-lg text-on-surface-variant max-w-md mb-12 leading-relaxed">
+                <p class="font-body text-base md:text-lg text-on-surface-variant max-w-md mb-8 md:mb-12 leading-relaxed">
                     A curated sanctuary where high-end artistry meets clinical precision. Experience the pinnacle of
                     beauty at Chandrick's Salon.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6">
                     <a href="https://wa.me/27797113968" target="_blank" rel="noopener noreferrer"
-                        class="bg-zen-sage text-white px-10 py-4 rounded-sm font-label uppercase tracking-widest text-xs font-bold hover:bg-zen-sage-dark transition-all shadow-md inline-block">
+                        class="bg-zen-sage text-white px-8 md:px-10 py-3.5 md:py-4 rounded-sm font-label uppercase tracking-widest text-[11px] md:text-xs font-bold hover:bg-zen-sage-dark transition-all shadow-md inline-block text-center whitespace-nowrap">
                         Book Your Session
                     </a>
                 </div>
@@ -71,19 +99,19 @@
             <span class="material-symbols-outlined animate-bounce">expand_more</span>
         </div>
     </header>
-    <section class="py-32 px-12 bg-white" id="services">
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-white" id="services">
         <div class="max-w-screen-xl mx-auto">
-            <div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+            <div class="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
                 <div>
-                    <h2 class="font-headline text-5xl text-on-surface mb-6">The Curator's Menu</h2>
+                    <h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-6">The Curator's Menu</h2>
                     <div class="h-0.5 w-24 bg-zen-sage"></div>
                 </div>
-                <p class="font-body text-on-surface-variant max-w-sm italic text-sm">
+                <p class="font-body text-on-surface-variant max-w-sm italic text-sm md:text-base">
                     Precision treatments designed for the modern individual who demands nothing less than excellence.
                     Updated for 2025.
                 </p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-24 gap-y-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-24 gap-y-12 md:gap-y-16">
                 <div
                     class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
                     <div class="flex items-center gap-4">
@@ -353,7 +381,7 @@
                 <img alt="Zen stones and bamboo in soft natural light" class="w-full h-full object-cover"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuARTkperrZU2PFCt6lnIX7JiH9asBXokTcY2w2TI_HsNtW5_LYiJo8q60IYAu2XN0hlCVm-9ZUtBKjuRPXYoIeDe9MDFCTi3UxuSuJwuyxqdlQNzZ0WU2kVgA20c7p-EU2hJLSg5dEK9CeTKERjIdD8sv6lMjmg7fRV1fkSQHIdXhBB0hd6Y7iuj91ZVBCXI4zlpsxzvCoGBAxn-aMkOLKZO30UyHYWK1c6luff4Z39ME6T4lvG3X4uNounbTQqvFNpJ8QPBQXWL9_s" />
             </div>
-            <div class="flex flex-col justify-center py-20 px-12 md:px-24 bg-zen-white">
+            <div class="flex flex-col justify-center py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-zen-white">
                 <span
                     class="font-label text-zen-sage-dark uppercase tracking-[0.2rem] text-[10px] mb-4 block font-bold">About
                     Us</span>
@@ -378,7 +406,7 @@
             </div>
         </div>
     </section>
-    <section class="py-32 px-12 bg-surface-container-lowest" id="gallery">
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-surface-container-lowest" id="gallery">
         <div class="max-w-screen-2xl mx-auto">
             <div class="mb-16 text-center">
                 <span
@@ -445,9 +473,9 @@
 
         </div>
     </section>
-    <section class="py-32 bg-white" id="contact">
-        <div class="max-w-screen-xl mx-auto px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+    <section class="py-20 md:py-32 bg-white" id="contact">
+        <div class="max-w-screen-xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
                 <div>
                     <h2 class="font-headline text-5xl mb-12 text-on-surface">Visit The Studio</h2>
                     <div class="space-y-12">
@@ -485,7 +513,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-zen-cream p-12 rounded-sm shadow-sm border border-outline-variant/30">
+                <div class="bg-zen-cream p-6 md:p-12 rounded-sm shadow-sm border border-outline-variant/30">
                     <h3 class="font-headline text-3xl mb-8 text-on-surface">Request a Callback</h3>
                     <form class="space-y-8">
                         <div
@@ -531,10 +559,10 @@
             </div>
         </div>
     </section>
-    <footer class="w-full py-16 px-12 bg-zen-white border-t border-outline-variant">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-screen-2xl mx-auto">
+    <footer class="w-full py-12 md:py-16 px-6 md:px-12 bg-zen-white border-t border-outline-variant">
+        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8 w-full max-w-screen-2xl mx-auto">
             <div class="font-headline text-xl italic text-zen-sage-dark">The Obsidian Curator</div>
-            <div class="flex gap-8">
+            <div class="flex flex-wrap justify-center gap-6 md:gap-8">
                 <a class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant font-semibold hover:text-zen-sage transition-colors"
                     href="#">Privacy Policy</a>
                 <a class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant font-semibold hover:text-zen-sage transition-colors"
