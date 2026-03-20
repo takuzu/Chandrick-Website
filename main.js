@@ -13,20 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
             mobileMenu.classList.remove('hidden');
             // Trigger animation
             requestAnimationFrame(() => {
-                mobileMenu.classList.remove('opacity-0', 'translate-y-10');
+                mobileMenu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
             });
-            body.style.overflow = 'hidden';
         } else {
-            mobileMenu.classList.add('opacity-0', 'translate-y-10');
+            mobileMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
             setTimeout(() => {
                 mobileMenu.classList.add('hidden');
             }, 300);
-            body.style.overflow = '';
         }
     }
 
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-    if (menuClose) menuClose.addEventListener('click', toggleMenu);
 
     // Close menu on link click
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
