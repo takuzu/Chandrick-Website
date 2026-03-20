@@ -17,12 +17,13 @@
 </head>
 
 <body class="bg-surface text-on-surface font-body selection:bg-zen-sage selection:text-white overflow-x-hidden">
-    <nav class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-lg border-b border-outline-variant/30 transition-all duration-300" id="navbar">
+    <nav class="fixed top-0 w-full z-50 bg-white/5 backdrop-blur-xl border-b border-white/10 transition-all duration-500"
+        id="navbar">
         <div class="flex justify-between items-center px-4 md:px-12 py-2.5 md:py-5 w-full max-w-screen-2xl mx-auto">
             <div
                 class="font-headline italic text-sm md:text-2xl text-zen-sage-dark tracking-tight border-0 md:border md:border-black md:px-4 md:py-1.5 rounded-sm whitespace-nowrap">
                 Chandrick's Beauty Room</div>
-            
+
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center gap-10">
                 <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-zen-sage-dark border-b-2 border-zen-sage pb-1 transition-colors duration-300"
@@ -34,7 +35,7 @@
                 <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-on-surface-variant hover:text-zen-sage transition-colors duration-300"
                     href="#gallery">Gallery</a>
                 <a class="font-label uppercase tracking-[0.15rem] text-[11px] font-semibold text-on-surface-variant hover:text-zen-sage transition-colors duration-300"
-                    href="#contact">Contact</a>
+                    href="#contact">Contact Us</a>
             </div>
 
             <div class="flex items-center gap-4">
@@ -45,29 +46,39 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Mobile Sidebar Menu Backdrop -->
-    <div id="menu-backdrop" class="hidden fixed inset-0 z-[90] bg-black/40 opacity-0 transition-opacity duration-300 backdrop-blur-sm lg:hidden cursor-pointer"></div>
-    
+    <div id="menu-backdrop"
+        class="hidden fixed inset-0 z-[90] bg-black/40 opacity-0 transition-opacity duration-300 backdrop-blur-sm lg:hidden cursor-pointer">
+    </div>
+
     <!-- Mobile Sidebar Menu (Compact Bottom-Up) -->
-    <div id="mobile-menu" class="hidden fixed bottom-24 right-6 z-[100] w-auto min-w-[200px] bg-white/20 backdrop-blur-xl border border-white/30 rounded-3xl shadow-2xl lg:hidden transition-all duration-300 transform translate-y-8 opacity-0 pointer-events-none">
+    <div id="mobile-menu"
+        class="hidden fixed bottom-24 right-6 z-[100] w-auto min-w-[200px] bg-white/20 backdrop-blur-xl border border-white/30 rounded-3xl shadow-2xl lg:hidden transition-all duration-300 transform translate-y-8 opacity-0 pointer-events-none">
         <div class="flex flex-col p-4 gap-0">
-            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 border-b border-white/10 active:bg-white/10 transition-colors last:border-b-0" href="#">Home</a>
-            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 border-b border-white/10 active:bg-white/10 transition-colors last:border-b-0" href="#services">Services</a>
-            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 border-b border-white/10 active:bg-white/10 transition-colors last:border-b-0" href="#gallery">Gallery</a>
-            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 border-b border-white/10 active:bg-white/10 transition-colors last:border-b-0" href="#contact">Contact</a>
-            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 border-b border-white/10 active:bg-white/10 transition-colors last:border-b-0" href="#about">About Us</a>
+            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 px-4 rounded-xl border-b border-white/5 hover:bg-white/20 hover:text-white active:bg-white/30 transition-all duration-300 last:border-b-0"
+                href="#">Home</a>
+            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 px-4 rounded-xl border-b border-white/5 hover:bg-white/20 hover:text-white active:bg-white/30 transition-all duration-300 last:border-b-0"
+                href="#services">Services</a>
+            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 px-4 rounded-xl border-b border-white/5 hover:bg-white/20 hover:text-white active:bg-white/30 transition-all duration-300 last:border-b-0"
+                href="#gallery">Gallery</a>
+            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 px-4 rounded-xl border-b border-white/5 hover:bg-white/20 hover:text-white active:bg-white/30 transition-all duration-300 last:border-b-0"
+                href="#contact">Contact Us</a>
+            <a class="mobile-nav-link font-headline italic text-xl text-on-surface py-2.5 px-4 rounded-xl border-b border-white/5 hover:bg-white/20 hover:text-white active:bg-white/30 transition-all duration-300 last:border-b-0"
+                href="#about">About Us</a>
         </div>
     </div>
-    
+
     <!-- Mobile Floating Navigation Button -->
-    <button id="menu-toggle" class="lg:hidden fixed bottom-6 right-6 z-[110] bg-zen-sage text-white p-4 rounded-full shadow-2xl active:scale-95 transform transition-all duration-300 hover:bg-zen-sage-dark focus:outline-none flex items-center justify-center border border-white/20 backdrop-blur-sm" aria-label="Open menu">
+    <button id="menu-toggle"
+        class="lg:hidden fixed bottom-6 right-6 z-[110] bg-zen-sage text-white p-4 rounded-full shadow-2xl active:scale-95 transform transition-all duration-300 hover:bg-zen-sage-dark focus:outline-none flex items-center justify-center border border-white/20 backdrop-blur-sm"
+        aria-label="Open menu">
         <span class="material-symbols-outlined text-3xl">menu</span>
     </button>
     <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div class="absolute inset-0 z-0">
-            <img alt="Serene spa interior with natural light and bamboo elements"
-                class="w-full h-full object-cover" src="https://static.vecteezy.com/system/resources/previews/049/978/749/non_2x/spa-concept-massage-stones-with-towels-and-candles-free-photo.jpg" />
+            <img alt="Serene spa interior with natural light and bamboo elements" class="w-full h-full object-cover"
+                src="https://static.vecteezy.com/system/resources/previews/049/978/749/non_2x/spa-concept-massage-stones-with-towels-and-candles-free-photo.jpg" />
             <div class="absolute inset-0 zen-gradient-hero"></div>
         </div>
         <div class="relative z-10 w-full max-w-screen-2xl px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -75,10 +86,12 @@
                 <span
                     class="font-label text-zen-sage-dark uppercase tracking-[0.4rem] text-[10px] md:text-xs mb-4 block font-semibold">Est.
                     2024</span>
-                <h1 class="font-headline text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-on-surface leading-tight mb-6 md:mb-8">
+                <h1
+                    class="font-headline text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-on-surface leading-tight mb-6 md:mb-8">
                     Elevated <br /> <span class="italic text-zen-sage">Aesthetics</span>
                 </h1>
-                <p class="font-body text-sm sm:text-base md:text-lg text-on-surface-variant max-w-md mb-6 md:mb-12 leading-relaxed">
+                <p
+                    class="font-body text-sm sm:text-base md:text-lg text-on-surface-variant max-w-md mb-6 md:mb-12 leading-relaxed">
                     A curated sanctuary where high-end artistry meets clinical precision. Experience the pinnacle of
                     beauty at Chandrick's Salon.
                 </p>
@@ -99,8 +112,8 @@
         <div class="max-w-screen-xl mx-auto">
             <div class="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
                 <div>
-                    <h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-6">The Curator's Menu</h2>
-                    <div class="h-0.5 w-24 bg-zen-sage"></div>
+                    <h2 class="font-headline text-5xl md:text-7xl text-on-surface mb-6 font-bold tracking-tight">The <span class="text-zen-sage italic">Curator's</span> Menu</h2>
+                    <div class="h-1 w-32 bg-zen-sage rounded-full"></div>
                 </div>
                 <p class="font-body text-on-surface-variant max-w-sm italic text-sm md:text-base">
                     Precision treatments designed for the modern individual who demands nothing less than excellence.
@@ -109,157 +122,163 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-24 gap-y-12 md:gap-y-16">
                 <div
-                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-zen-sage text-3xl">spa</span>
-                        <h3 class="font-headline text-2xl font-medium tracking-tight">Massages</h3>
+                    class="space-y-10 p-8 sm:p-12 border border-outline-variant rounded-3xl bg-surface-container-lowest shadow-xl hover:-translate-y-2 hover:border-zen-sage hover:shadow-[0_20px_50px_rgba(110,123,103,0.15)] transition-all duration-700 group/card">
+                    <div class="flex items-center gap-6">
+                        <div class="p-4 bg-zen-sage/10 rounded-2xl group-hover/card:bg-zen-sage group-hover/card:text-white transition-colors duration-500">
+                            <span class="material-symbols-outlined text-4xl">spa</span>
+                        </div>
+                        <h3 class="font-headline text-3xl font-bold tracking-tight">Massages</h3>
                     </div>
                     <div class="space-y-6">
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Swedish
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Swedish
                                 Full Body</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R400</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R400</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Hot
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Hot
                                 stone full body</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R450</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R450</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Back,
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Back,
                                 neck &amp; shoulder</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R250</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R250</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Back,
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Back,
                                 neck &amp; shoulder Hot Stone</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R300</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R300</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Full
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Full
                                 Half Body</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R300</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R300</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors italic">Add
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors italic font-medium">Add
                                 On G5 Machine</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R70</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R70</span>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-zen-sage text-3xl">face</span>
-                        <h3 class="font-headline text-2xl font-medium tracking-tight">Tint &amp; Wax</h3>
+                    class="space-y-10 p-8 sm:p-12 border border-outline-variant rounded-3xl bg-surface-container-lowest shadow-xl hover:-translate-y-2 hover:border-zen-sage hover:shadow-[0_20px_50px_rgba(110,123,103,0.15)] transition-all duration-700 group/card">
+                    <div class="flex items-center gap-6">
+                        <div class="p-4 bg-zen-sage/10 rounded-2xl group-hover/card:bg-zen-sage group-hover/card:text-white transition-colors duration-500">
+                            <span class="material-symbols-outlined text-4xl">face</span>
+                        </div>
+                        <h3 class="font-headline text-3xl font-bold tracking-tight">Tint &amp; Wax</h3>
                     </div>
                     <div class="space-y-6">
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Lash
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Lash
                                 Tint</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R50</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R50</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Brow
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Brow
                                 Tint</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R50</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R50</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Brow
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Brow
                                 Wax</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R50</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R50</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Lip
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Lip
                                 Wax</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R40</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R40</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Nose
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Nose
                                 &amp; Ear</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R90</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R90</span>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-zen-sage text-3xl">pan_tool</span>
-                        <h3 class="font-headline text-2xl font-medium tracking-tight">Manicure / Pedicure</h3>
+                    class="space-y-10 p-8 sm:p-12 border border-outline-variant rounded-3xl bg-surface-container-lowest shadow-xl hover:-translate-y-2 hover:border-zen-sage hover:shadow-[0_20px_50px_rgba(110,123,103,0.15)] transition-all duration-700 group/card">
+                    <div class="flex items-center gap-6">
+                        <div class="p-4 bg-zen-sage/10 rounded-2xl group-hover/card:bg-zen-sage group-hover/card:text-white transition-colors duration-500">
+                            <span class="material-symbols-outlined text-4xl">pan_tool</span>
+                        </div>
+                        <h3 class="font-headline text-3xl font-bold tracking-tight">Manicure / Pedicure</h3>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                         <div class="space-y-6">
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Geloverlay</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R200</span>
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Geloverlay</span>
+                                <span class="font-label text-zen-wood font-bold text-base">R200</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Geloverlay
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Geloverlay
                                     + Tips</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R250</span>
+                                <span class="font-label text-zen-wood font-bold text-base">R250</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Full
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Full
                                     Manicure &amp; Gel</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R270</span>
+                                <span class="font-label text-zen-wood font-bold text-base">R270</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Gel
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Gel
                                     fill (After 2weeks)</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R170</span>
+                                <span class="font-label text-zen-wood font-bold text-base">R170</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Add
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Add
                                     Art</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R10-15</span>
+                                <span class="font-label text-zen-wood font-bold text-base">R10-15</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Soak
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Soak
                                     Off Gel</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R60</span>
+                                <span class="font-label text-zen-wood font-bold text-base">R60</span>
                             </div>
                         </div>
                         <div class="space-y-6">
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Gel
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Gel
                                     Toes</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R150</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R150</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Full
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Full
                                     Pedicure &amp; Gel</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R280</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R280</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Gel
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Gel
                                     Removal (buff off)</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R40</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R40</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-sm text-on-surface group-hover:text-zen-sage transition-colors">Paraffin
+                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors font-medium">Paraffin
                                     mask (hand/feet)</span>
-                                <span class="font-label text-zen-wood font-semibold text-sm">R70</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R70</span>
                             </div>
                         </div>
                     </div>
@@ -272,26 +291,26 @@
                             <h3 class="font-headline text-2xl font-medium tracking-tight">Waxing</h3>
                         </div>
                         <div class="space-y-6">
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Underarm</span>
-                                <span class="font-label text-zen-wood font-semibold text-base">R100</span>
+                                    class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Underarm</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R100</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Brazilian</span>
-                                <span class="font-label text-zen-wood font-semibold text-base">R150</span>
+                                    class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Brazilian</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R150</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Hollywood</span>
-                                <span class="font-label text-zen-wood font-semibold text-base">R200</span>
+                                    class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Hollywood</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R200</span>
                             </div>
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Half
+                                    class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Half
                                     Leg</span>
-                                <span class="font-label text-zen-wood font-semibold text-base">R200</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R200</span>
                             </div>
                         </div>
                     </div>
@@ -302,57 +321,61 @@
                             <h3 class="font-headline text-2xl font-medium tracking-tight">Lashes</h3>
                         </div>
                         <div class="space-y-6">
-                            <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                            <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                                 <span
-                                    class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Classic</span>
-                                <span class="font-label text-zen-wood font-semibold text-base">R300</span>
+                                    class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Classic</span>
+                                <span class="font-label text-zen-wood font-bold text-lg">R300</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-zen-sage text-3xl">person</span>
-                        <h3 class="font-headline text-2xl font-medium tracking-tight">Facials</h3>
+                    class="space-y-10 p-8 sm:p-12 border border-outline-variant rounded-3xl bg-surface-container-lowest shadow-xl hover:-translate-y-2 hover:border-zen-sage hover:shadow-[0_20px_50px_rgba(110,123,103,0.15)] transition-all duration-700 group/card">
+                    <div class="flex items-center gap-6">
+                        <div class="p-4 bg-zen-sage/10 rounded-2xl group-hover/card:bg-zen-sage group-hover/card:text-white transition-colors duration-500">
+                            <span class="material-symbols-outlined text-4xl">person</span>
+                        </div>
+                        <h3 class="font-headline text-3xl font-bold tracking-tight">Facials</h3>
                     </div>
                     <div class="space-y-6">
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Classic
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Classic
                                 Facial</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R280</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R280</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Hydration
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Hydration
                                 Facial</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R320</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R320</span>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="space-y-10 p-8 sm:p-10 border border-outline-variant/60 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-zen-sage/60 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500">
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-zen-sage text-3xl">face_5</span>
-                        <h3 class="font-headline text-2xl font-medium tracking-tight">Micropigment Brow</h3>
+                    class="space-y-10 p-8 sm:p-12 border border-outline-variant rounded-3xl bg-surface-container-lowest shadow-xl hover:-translate-y-2 hover:border-zen-sage hover:shadow-[0_20px_50px_rgba(110,123,103,0.15)] transition-all duration-700 group/card">
+                    <div class="flex items-center gap-6">
+                        <div class="p-4 bg-zen-sage/10 rounded-2xl group-hover/card:bg-zen-sage group-hover/card:text-white transition-colors duration-500">
+                            <span class="material-symbols-outlined text-4xl">face_5</span>
+                        </div>
+                        <h3 class="font-headline text-3xl font-bold tracking-tight">Micropigment Brow</h3>
                     </div>
                     <div class="space-y-6">
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Microbladding</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R550</span>
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Microbladding</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R550</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Ombre
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Ombre
                                 (Combo)</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R1200</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R1200</span>
                         </div>
-                        <div class="flex justify-between items-end group border-b border-outline-variant pb-2">
+                        <div class="flex justify-between items-end group border-b border-outline-variant/30 pb-3 hover:border-zen-sage transition-colors">
                             <span
-                                class="font-body text-base text-on-surface group-hover:text-zen-sage transition-colors">Shading/Powder</span>
-                            <span class="font-label text-zen-wood font-semibold text-base">R850</span>
+                                class="font-body text-lg text-on-surface group-hover:text-zen-sage transition-colors font-medium">Shading/Powder</span>
+                            <span class="font-label text-zen-wood font-bold text-lg">R850</span>
                         </div>
                     </div>
                 </div>
@@ -556,7 +579,8 @@
         </div>
     </section>
     <footer class="w-full py-12 md:py-16 px-6 md:px-12 bg-zen-white border-t border-outline-variant">
-        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8 w-full max-w-screen-2xl mx-auto">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8 w-full max-w-screen-2xl mx-auto">
             <div class="font-headline text-xl italic text-zen-sage-dark">The Obsidian Curator</div>
             <div class="flex flex-wrap justify-center gap-6 md:gap-8">
                 <a class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant font-semibold hover:text-zen-sage transition-colors"
