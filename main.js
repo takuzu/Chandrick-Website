@@ -51,12 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const modalClose = document.createElement('button');
         modalClose.type = 'button';
-        modalClose.className = 'service-modal-close absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-outline-variant bg-white/90 text-on-surface shadow-md transition-transform duration-200 hover:scale-105';
+        modalClose.className = 'service-modal-close absolute right-4 top-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-outline-variant bg-white/90 text-on-surface shadow-md transition-transform duration-200 hover:scale-105';
         modalClose.setAttribute('aria-label', 'Close price list');
         modalClose.innerHTML = '<span class="material-symbols-outlined text-2xl">close</span>';
 
         let activeServiceId = '';
         let activeServiceButton = null;
+        let swipeState = null;
 
         const restartPanelAnimation = (panel) => {
             panel.classList.remove('service-panel-enter');
@@ -86,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             modalCard.hidden = false;
             modalCard.setAttribute('aria-hidden', 'false');
             modalCardInner.innerHTML = `
+                <div class="modal-drag-handle mx-auto mb-6 h-1.5 w-16 rounded-full bg-zen-sage/35 md:hidden"></div>
                 <div class="flex items-center justify-between gap-4 mb-8 pr-14">
                     <div class="flex items-center gap-4">
                         <span class="material-symbols-outlined text-zen-sage text-4xl">${service.icon}</span>
@@ -110,12 +112,16 @@ document.addEventListener("DOMContentLoaded", () => {
             activeServiceId = service.id;
             body.classList.add('service-modal-open');
             body.style.overflow = 'hidden';
+            swipeState = null;
         };
 
         const closeModal = () => {
+            swipeState = null;
             modalCard.hidden = true;
             modalCard.setAttribute('aria-hidden', 'true');
             modalCard.classList.remove('service-panel-enter');
+            modalCard.style.transform = '';
+            modalCard.style.opacity = '';
 
             modalBackdrop.classList.remove('opacity-100');
             modalBackdrop.setAttribute('aria-hidden', 'true');
@@ -191,6 +197,47 @@ document.addEventListener("DOMContentLoaded", () => {
         modalScrim.addEventListener('click', closeModal);
         modalViewport.addEventListener('click', (event) => event.stopPropagation());
         modalClose.addEventListener('click', closeModal);
+        modalCard.addEventListener('pointerdown', (event) => {
+            if (window.innerWidth >= 768 || modalCard.hidden || event.pointerType !== 'touch') return;
+            swipeState = {
+                pointerId: event.pointerId,
+                startY: event.clientY,
+                currentY: event.clientY,
+                dragging: false,
+            };
+            modalCard.setPointerCapture(event.pointerId);
+        });
+        modalCard.addEventListener('pointermove', (event) => {
+            if (!swipeState || swipeState.pointerId !== event.pointerId) return;
+            swipeState.currentY = event.clientY;
+            const deltaY = swipeState.currentY - swipeState.startY;
+            if (deltaY > 8) {
+                swipeState.dragging = true;
+                const translateY = Math.min(deltaY, 150);
+                const scale = Math.max(0.94, 1 - deltaY / 3000);
+                modalCard.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                modalCard.style.opacity = `${Math.max(0.5, 1 - deltaY / 280)}`;
+            }
+        });
+        modalCard.addEventListener('pointerup', (event) => {
+            if (!swipeState || swipeState.pointerId !== event.pointerId) return;
+            const deltaY = swipeState.currentY - swipeState.startY;
+            modalCard.releasePointerCapture(event.pointerId);
+            modalCard.style.transform = '';
+            modalCard.style.opacity = '';
+            const shouldClose = swipeState.dragging && deltaY > 76;
+            swipeState = null;
+            if (shouldClose) {
+                closeModal();
+            }
+        });
+        modalCard.addEventListener('pointercancel', (event) => {
+            if (swipeState?.pointerId !== event.pointerId) return;
+            modalCard.releasePointerCapture(event.pointerId);
+            modalCard.style.transform = '';
+            modalCard.style.opacity = '';
+            swipeState = null;
+        });
         window.addEventListener('resize', () => {
             if (!modalBackdrop.classList.contains('hidden')) {
                 syncModalBackdrop();
@@ -243,16 +290,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('bg-white/90', 'py-3');
-            navbar.classList.remove('bg-white/10', 'py-5');
-        } else {
-            navbar.classList.add('bg-white/10', 'py-5');
-            navbar.classList.remove('bg-white/90', 'py-3');
-        }
-    });
 });
 
 console.log("App Initialized successfully!");

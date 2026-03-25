@@ -58,7 +58,7 @@
 }
 
 .service-panel-enter {
-    animation: servicePanelMiddleOut 460ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: servicePanelMiddleOut 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .service-modal-open {
@@ -72,9 +72,9 @@
 
 @keyframes servicePanelMiddleOut {
     from {
-        clip-path: inset(0 40% 0 40%);
+        clip-path: inset(0 34% 0 34%);
         opacity: 0;
-        transform: scale(0.94) translateY(12px);
+        transform: scale(0.965) translateY(10px);
     }
 
     65% {
@@ -86,6 +86,14 @@
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.service-modal-close {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.modal-drag-handle {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 #mobile-menu {
