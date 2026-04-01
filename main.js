@@ -1,4 +1,8 @@
 import './style.css';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+// Initialize Vercel Speed Insights
+injectSpeedInsights();
 
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById('navbar');
